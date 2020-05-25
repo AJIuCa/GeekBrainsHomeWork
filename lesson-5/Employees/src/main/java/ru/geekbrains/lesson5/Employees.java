@@ -2,14 +2,15 @@ package ru.geekbrains.lesson5;
 
 public class Employees {
 
-    protected String surname;
-    protected String name;
-    protected String middleName;
-    int age;
-    String position;
-    double salary;
-    String eMail;
-    String phoneNumber;
+
+    private String surname;
+    private String name;
+    private String middleName;
+    private int age;
+    private String position;
+    private double salary;
+    private String eMail;
+    private String phoneNumber;
 
     Employees(String surname, String name, String middleName, int age, String position, double salary,
               String eMail, String phoneNumber) {
@@ -22,6 +23,39 @@ public class Employees {
         this.eMail = eMail;
         this.phoneNumber = phoneNumber;
     }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public String geteMail() {
+        return eMail;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
 
     void employeeFile() {
         System.out.println("Personal data of the employee.\n- Surname: " + this.surname + "\n- Name: " + this.name +
