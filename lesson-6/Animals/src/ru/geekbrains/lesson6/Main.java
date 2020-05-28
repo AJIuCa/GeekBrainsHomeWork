@@ -28,7 +28,7 @@ public class Main {
             cats();
             dogs();
         } else if (scanChoice == 2) {
-            checkCatSkills(cat1);
+            checkCatSkills();
         } else if (scanChoice == 3) {
             checkDogSkills();
         } else {
@@ -85,7 +85,6 @@ public class Main {
             }
         } else {
         }
-    return checkCatSkills(cat1);
     }
 
     public static void checkDogSkills() {
