@@ -28,7 +28,7 @@ public class Main {
             catsInfoList(catsList());
             dogsInfoList(dogsList());
         } else if (scanChoice == 2) {
-       checkCatSkills(catsList());
+            checkCatSkills(catsList());
 
         } else if (scanChoice == 3) {
             checkDogSkills(dogsList());
@@ -43,7 +43,7 @@ public class Main {
         return cat1;
     }
 
-    public static void catsInfoList (Cats cat1) {
+    public static void catsInfoList(Cats cat1) {
         cat1.catPresent();
         cat1.run();
         cat1.jump();
@@ -80,14 +80,17 @@ public class Main {
             } else {
                 System.out.println("Cat afraid water. He won't do it.");
             }
+        } else {
+            checkCatSkills(catsList());
         }
     }
+
     public static Dogs dogsList() {
         Dogs dog1 = new Dogs("Shurik", 500, 10, 0.5);
         return dog1;
     }
 
-    public static void dogsInfoList (Dogs dog1) {
+    public static void dogsInfoList(Dogs dog1) {
         dog1.dogPresent();
         dog1.run();
         dog1.jump();
@@ -113,9 +116,9 @@ public class Main {
             System.out.println("Input jump height in meters.");
             double newJumpHeight = scanner.nextDouble();
             if (newJumpHeight > jumpHeight) {
-                System.out.println(String.format("Dog can't jump so far.Max jump height for dog %s meters.",jumpHeight));
+                System.out.println(String.format("Dog can't jump so far.Max jump height for dog %s meters.", jumpHeight));
             } else {
-                System.out.println(String.format("Great, its true. Max jump height for dog %s meters.",jumpHeight));
+                System.out.println(String.format("Great, its true. Max jump height for dog %s meters.", jumpHeight));
             }
         } else if (skillNumber == 3) {
             System.out.println("Input swim distance in meters");
@@ -125,6 +128,8 @@ public class Main {
             } else {
                 System.out.println(String.format("Great, its true. Max swim distance for dog %s meters.", swimDistance));
             }
+        } else {
+            checkDogSkills(dogsList());
         }
     }
 }
