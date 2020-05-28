@@ -25,8 +25,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int scanChoice = scanner.nextInt();
         if (scanChoice == 1) {
-            cats();
-            dogs();
+            catsList();
+            dogsList();
         } else if (scanChoice == 2) {
             checkCatSkills();
         } else if (scanChoice == 3) {
@@ -36,21 +36,23 @@ public class Main {
         }
     }
 
-    public static void cats() {
+    public static Cats catsList() {
 
         Cats cat1 = new Cats("Boris", 200, 0, 2);
         cat1.catPresent();
         cat1.run();
         cat1.jump();
         cat1.swim();
+        return cat1;
     }
 
-    public static void dogs() {
+    public static Dogs dogsList() {
         Dogs dog1 = new Dogs("Shurik", 500, 10, 0.5);
         dog1.dogPresent();
         dog1.run();
         dog1.jump();
         dog1.swim();
+        return dog1;
     }
 
     public static void checkCatSkills(Cats cat1) {
@@ -83,7 +85,6 @@ public class Main {
             } else {
                 System.out.println("Cat afraid water. He won't do it.");
             }
-        } else {
         }
     }
 
