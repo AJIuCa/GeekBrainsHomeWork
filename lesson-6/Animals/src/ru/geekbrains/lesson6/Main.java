@@ -28,7 +28,7 @@ public class Main {
             cats();
             dogs();
         } else if (scanChoice == 2) {
-            checkCatSkills();
+            checkCatSkills(cat1);
         } else if (scanChoice == 3) {
             checkDogSkills();
         } else {
@@ -43,7 +43,6 @@ public class Main {
         cat1.run();
         cat1.jump();
         cat1.swim();
-        return;
     }
 
     public static void dogs() {
@@ -54,39 +53,39 @@ public class Main {
         dog1.swim();
     }
 
-    public static void checkCatSkills() {
-        cats();
+    public static void checkCatSkills(Cats cat1) {
+        double runDistance = cat1.getRunDistance();
+        double jumpHeight = cat1.getJumpHeight();
         Scanner scanner = new Scanner(System.in);
         System.out.println("What skills you want check?\n1 - skill to run \n2 - skill to jump \n3 - skill to swim");
         int skillNumber = scanner.nextInt();
         if (skillNumber == 1) {
             System.out.println("Input run distance in meters.");
-            int newRunDistance = scanner.nextInt();
-            if (newRunDistance > cat1.getRunDistance) {
+            double newRunDistance = scanner.nextDouble();
+            if (newRunDistance > runDistance) {
                 System.out.println("Cat can't run so far.");
             } else {
                 System.out.println("Not bad. Max run distance for cat 200 meters.");
             }
         } else if (skillNumber == 2) {
             System.out.println("Input jump height in meters.");
-            int newJumpDistance = scanner.nextInt();
-            if (newJumpDistance > cat1.getJumpDistance) {
+            double newJumpDistance = scanner.nextDouble();
+            if (newJumpDistance > jumpHeight) {
                 System.out.println("Cat can't jump so far.");
             } else {
                 System.out.println("Not bad. Max jump height for cat 2 meters.");
             }
         } else if (skillNumber == 3) {
             System.out.println("Input swim distance in meters");
-            int newSwimDistance = scanner.nextInt();
+            double newSwimDistance = scanner.nextDouble();
             if (newSwimDistance > 0) {
                 System.out.println("Cat afraid water. He won't do it.");
             } else {
                 System.out.println("Cat afraid water. He won't do it.");
             }
         } else {
-            checkCatSkills();
         }
-
+    return checkCatSkills(cat1);
     }
 
     public static void checkDogSkills() {
