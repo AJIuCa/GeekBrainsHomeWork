@@ -51,20 +51,25 @@ public class Main {
 
         System.out.println("\nList of employees over 40 years.\n _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  \n");
 
-        if (employees[0].age > 40) {
-            employees[0].employeeFile();
-        }
-        if (employees[1].age > 40) {
-            employees[1].employeeFile();
-        }
-        if (employees[2].age > 40) {
-            employees[2].employeeFile();
-        }
-        if (employees[3].age > 40) {
-            employees[3].employeeFile();
-        }
-        if (employees[4].age > 40) {
-            employees[4].employeeFile();
+//        if (employees[0].age > 40) {
+//            employees[0].employeeFile();
+//        }
+//        if (employees[1].age > 40) {
+//            employees[1].employeeFile();
+//        }
+//        if (employees[2].age > 40) {
+//            employees[2].employeeFile();
+//        }
+//        if (employees[3].age > 40) {
+//            employees[3].employeeFile();
+//        }
+//        if (employees[4].age > 40) {
+//            employees[4].employeeFile();
+//        }
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i].getAge() > 40) {
+                employees[i].employeeFile();
+            }
         }
     }
 }
