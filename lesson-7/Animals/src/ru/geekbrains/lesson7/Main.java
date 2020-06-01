@@ -22,7 +22,7 @@ public class Main {
 
     public static void startApp() {
 
-        int j;
+        int eatCircle;
         Scanner scanner = new Scanner(System.in);
         Cats[] cats = new Cats[3];
         cats[0] = new Cats("Boris", 7, 0);
@@ -30,8 +30,8 @@ public class Main {
         cats[2] = new Cats("Polina", 4, 0);
         Bowl bowl = new Bowl(50);
         System.out.println("Do you want feed a cats? If YES input 1");
-        j = scanner.nextInt();
-        while (j == 1) {
+        eatCircle = scanner.nextInt();
+        while (eatCircle == 1) {
             for (int i = 0; i < cats.length; i++) {
                 if (bowl.getFood() > cats[i].getAppetite()) {
                     cats[i].eat(bowl);
@@ -53,9 +53,9 @@ public class Main {
                     bowl.refillFood();
                 }
             }
-        bowl.checkBowl();
-        System.out.println("\nDo you want feed cat again?");
-        j = scanner.nextInt();
+            bowl.checkBowl();
+            System.out.println("\nDo you want feed cat again?");
+            eatCircle = scanner.nextInt();
+        }
     }
 }
-    }
