@@ -22,7 +22,7 @@ public class Bowl {
     }
 
     public void decreaseFood (int i) {
-        this.food = food - i;
+        food = food - i;
     }
 
     public void checkBowl () {
