@@ -16,8 +16,9 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-//        repeatedWords();
-        phoneBooks();
+        repeatedWords();
+
+        Note();
     }
 
 
@@ -38,7 +39,7 @@ public class Main {
         listArray.add("snake");
         listArray.add("deathguard");
         listArray.add("KKnD");
-//        System.out.println(listArray);
+        System.out.println(listArray);
 
         Set <String> hashSetArray = new HashSet<>(listArray);
         System.out.println(hashSetArray);
@@ -50,34 +51,15 @@ public class Main {
                 repeatedWords.put(word, 0);
             }
             repeatedWords.put(word, repeatedWords.get(word) + 1);
-            System.out.println(word + " = " + repeatedWords.get(word));
         }
+        System.out.println(repeatedWords);
     }
-    public static void phoneBooks () {
-//        PhoneBook contact1 = new PhoneBook("Petrov",222);
-//        PhoneBook contact2 = new PhoneBook("Kozlov",1246977);
-//        PhoneBook contact3 = new PhoneBook("Yagodka",7789964);
 
-        Surname surname1 = new Surname("Petro");
-        Surname surname2 = new Surname("Sergo");
-        Surname surname3 = new Surname("Yagodka");
-        Surname surname4 = new Surname("Super");
 
-        PhoneNumber phoneNumber1 = new PhoneNumber(23);
-        PhoneNumber phoneNumber2 = new PhoneNumber(7477);
-        PhoneNumber phoneNumber3 = new PhoneNumber(123);
-        PhoneNumber phoneNumber4 = new PhoneNumber(3333);
+    public static void Note () {
+        NoteBook noteBook1 = new NoteBook( );
+        noteBook1.addContacts();
 
-        HashMap<Object, Object> phoneBook = new HashMap<>();
-        phoneBook.put(surname1.getSurname(), phoneNumber1.getPhonenumber());
-        phoneBook.put(surname2.getSurname(), phoneNumber2.getPhonenumber());
-        phoneBook.put(surname3.getSurname(), phoneNumber3.getPhonenumber());
-        phoneBook.put(surname4.getSurname(), phoneNumber4.getPhonenumber());
-
-        System.out.println(phoneBook.entrySet());
-        for (Object val : phoneBook.values()) {
-            System.out.println(val);
-        }
     }
 }
 
