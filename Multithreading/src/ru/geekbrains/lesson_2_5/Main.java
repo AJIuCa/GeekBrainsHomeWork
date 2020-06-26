@@ -48,38 +48,50 @@ public class Main {
     private static long secondTime;
 
     public static void main(String[] args) {
+
         startApp();
     }
+
+
 
     public static void startApp() {
 
         arrayWithoutMultithreading();
         arrayWithMultithreading();
-        compareTimes();
+//        compareTimes();
     }
 
-    public static long arrayWithoutMultithreading() {
+    public static void arrayWithoutMultithreading() {
 
         ArrayWithoutmultithreading basicArray = new ArrayWithoutmultithreading();
 
-        firstTime = basicArray.checkTime();
-        return firstTime;
+        long start = System.currentTimeMillis();
+
+        basicArray.checkTime();
+
+        long end = System.currentTimeMillis();
+
+        System.out.println("Time for build array Without Multi Threading= " + (end-start));
+
     }
 
-    public static long arrayWithMultithreading() {
-        ArrayWithMultithreading multiArray = new ArrayWithMultithreading();
+    public static void arrayWithMultithreading() {
 
-        secondTime = multiArray.checkTime();
-        return secondTime;
-    }
+        float [] arrayWithMultithreading;
 
-    public static void compareTimes() {
-        if (secondTime < firstTime) {
-            System.out.println("Method with multithreading fastest.");
-        } else if (secondTime > firstTime) {
-            System.out.println("Method without multithreading fastest.");
-        } else {
-            System.out.println("Both methods are equivalent.");
-        }
+        Thread thread1 = new Thread(new ArrayWithMultithreadingPart1of2());
+        Thread thread2 = new Thread(new ArrayWithMultithreadingPart2of2());
+
+        long start = System.currentTimeMillis();
+
+        thread1.start();
+        thread2.start();
+
+        long end = System.currentTimeMillis();
+
+        System.out.println("Time for build array With Multi Threading = " + (end-start));
+
+
+
     }
 }
