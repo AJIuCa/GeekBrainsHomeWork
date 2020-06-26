@@ -52,13 +52,10 @@ public class Main {
         startApp();
     }
 
-
-
     public static void startApp() {
 
         arrayWithoutMultithreading();
         arrayWithMultithreading();
-//        compareTimes();
     }
 
     public static void arrayWithoutMultithreading() {
@@ -71,13 +68,12 @@ public class Main {
 
         long end = System.currentTimeMillis();
 
-        System.out.println("Time for build array Without Multi Threading= " + (end-start));
+        System.out.println("Time for build array Without Multi Threading= " + (end - start));
 
     }
 
     public static void arrayWithMultithreading() {
 
-        float [] arrayWithMultithreading;
 
         Thread thread1 = new Thread(new ArrayWithMultithreadingPart1of2());
         Thread thread2 = new Thread(new ArrayWithMultithreadingPart2of2());
@@ -89,9 +85,7 @@ public class Main {
 
         long end = System.currentTimeMillis();
 
-        System.out.println("Time for build array With Multi Threading = " + (end-start));
-
-
+        System.out.println("Time for build array With Multi Threading = " + (end - start));
 
     }
 }

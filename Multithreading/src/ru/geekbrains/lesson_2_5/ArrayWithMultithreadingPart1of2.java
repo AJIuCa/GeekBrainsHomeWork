@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ArrayWithMultithreadingPart1of2 extends Array implements Runnable {
 
-    float[] packedArray = new float[getSize()];
+    float[] packedArray1 = new float[getHalf()];
 
     @Override
     public void run() {
@@ -31,9 +31,9 @@ public class ArrayWithMultithreadingPart1of2 extends Array implements Runnable {
 //            System.out.println(Arrays.toString(pieceOfBasicArray1));
 //            System.out.println("\n");
 
-//             System.arraycopy(pieceOfBasicArray1, 0, packedArray , 0, getHalf());
+             System.arraycopy(pieceOfBasicArray1, 0, packedArray1, 0, getHalf());
 
-            return packedArray;
+            return packedArray1;
         }
 
     }

@@ -2,7 +2,9 @@ package ru.geekbrains.lesson_2_5;
 
 import java.util.Arrays;
 
-    public class ArrayWithMultithreadingPart2of2 extends Array implements Runnable {
+public class ArrayWithMultithreadingPart2of2 extends Array implements Runnable {
+
+    float[] packedArray2 = new float[getHalf()];
 
     @Override
     public void run() {
@@ -26,6 +28,8 @@ import java.util.Arrays;
 //        System.out.println("\n");
 //        System.out.println(Arrays.toString(pieceOfBasicArray2));
 //        System.out.println("\n");
+
+        System.arraycopy(pieceOfBasicArray2, 0, packedArray2, getHalf(), getHalf());
 
         return pieceOfBasicArray2;
     }
