@@ -44,9 +44,6 @@ package ru.geekbrains.lesson_2_5;
 
 public class Main {
 
-    private static long firstTime;
-    private static long secondTime;
-
     public static void main(String[] args) {
 
         startApp();
@@ -61,31 +58,13 @@ public class Main {
     public static void arrayWithoutMultithreading() {
 
         ArrayWithoutmultithreading basicArray = new ArrayWithoutmultithreading();
-
-        long start = System.currentTimeMillis();
-
         basicArray.checkTime();
-
-        long end = System.currentTimeMillis();
-
-        System.out.println("Time for build array Without Multi Threading= " + (end - start));
-
     }
 
     public static void arrayWithMultithreading() {
 
-
-        Thread thread1 = new Thread(new ArrayWithMultithreadingPart1of2());
-        Thread thread2 = new Thread(new ArrayWithMultithreadingPart2of2());
-
-        long start = System.currentTimeMillis();
-
-        thread1.start();
-        thread2.start();
-
-        long end = System.currentTimeMillis();
-
-        System.out.println("Time for build array With Multi Threading = " + (end - start));
+        ArrayWithMultithreading multiThreadingStart = new ArrayWithMultithreading();
+        multiThreadingStart.multiThreading();
 
     }
 }
