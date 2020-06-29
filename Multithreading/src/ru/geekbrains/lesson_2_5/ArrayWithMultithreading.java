@@ -35,7 +35,7 @@ public class ArrayWithMultithreading extends Array {
 
 
         System.out.println("Time to multithreading method = " + (endMultithreading - startMultiThreading));
-        
+
     }
 
 
