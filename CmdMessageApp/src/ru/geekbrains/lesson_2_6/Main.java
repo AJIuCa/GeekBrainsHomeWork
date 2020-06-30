@@ -11,14 +11,7 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
-//        Server localServer = new Server();
-////        localServer.runServer();
-////
-//        Client testClient = new Client();
-////        testClient.runClient();
-//
-//        new Thread(() -> localServer.runServer()).start();
-//        new Thread(() -> testClient.runClient()).start();
+    public static void main(String[] args) {
+
     }
 }
