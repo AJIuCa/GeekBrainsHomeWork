@@ -33,7 +33,10 @@ public class Main {
 
     public static void startApp () {
 
-        arrayTransformation();
+//        System.out.println("<------------------------------------>");
+//        arrayTransformation();
+        System.out.println("<------------------------------------>");
+        boxWithFruits();
 
     }
 
@@ -69,10 +72,43 @@ public class Main {
         array[firstPosition] = array [secondPosition];
         array[secondPosition] = anyObject;
 
-
-
-
-
     }
+
+    public static void boxWithFruits () {
+
+        Apple redApple = new Apple(1.0f);
+        Apple greenApple = new Apple(1.0f);
+        Apple royalApple = new Apple(1.0f);
+        Apple diamondApple = new Apple(1.0f);
+
+        Orange redOrange = new Orange(1.5f);
+        Orange classicOrange = new Orange(1.5f);
+        Orange yellowOrange = new Orange(1.5f);
+
+        FruitBox<Apple> appletBox = new FruitBox<Apple>(redApple,greenApple,royalApple);
+        FruitBox<Orange> orangeBox = new FruitBox<Orange>(redOrange,classicOrange,yellowOrange);
+        FruitBox<Orange> orangeBox2 = new FruitBox<Orange>();
+
+        System.out.println("Apple box weight = " + appletBox.checkWeight());
+        System.out.println("Orange box weight = " + orangeBox.checkWeight());
+        appletBox.addFruit(diamondApple);
+        System.out.println("Put one apple into box for apples. Weight = " + appletBox.checkWeight());
+
+        System.out.println("Compare boxes");
+        boolean compare;
+        compare = appletBox.compareFruitBox(orangeBox);
+        if (compare == false) {
+            System.out.println("Weight of the boxes is different.");
+        } else {
+            System.out.println("Weight of the boxes is the same");
+        }
+
+        System.out.println("Put the oranges in another box");
+        orangeBox.put(orangeBox2);
+        orangeBox2.checkWeight();
+        orangeBox.checkWeight();
+        System.out.println("New Orange box weight = " + orangeBox2.checkWeight());
+        System.out.println("Orange box weight = " + orangeBox.checkWeight());
+        }
 
 }
