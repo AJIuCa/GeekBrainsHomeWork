@@ -33,8 +33,8 @@ public class Main {
 
     public static void startApp () {
 
-//        System.out.println("<------------------------------------>");
-//        arrayTransformation();
+        System.out.println("<------------------------------------>");
+        arrayTransformation();
         System.out.println("<------------------------------------>");
         boxWithFruits();
 
@@ -50,28 +50,41 @@ public class Main {
         simpleArray[4] = 99;
 
             System.out.println("Array before shuffle = " + Arrays.toString(simpleArray));
-            shuffle(2,4, simpleArray);
-            System.out.println("Array after shuffle = " + Arrays.toString(simpleArray));
+            shuffle(1,4, simpleArray);
+
 
             ArrayList<Integer> newArrayList = (ArrayList<Integer>) transformToArrayList(simpleArray);
             System.out.println("Array after transformations into ArrayList = " + newArrayList);
     }
 
 
-    public static <T> List<T> transformToArrayList (T [] array){
+//    public static <T> List<T> transformToArrayList (T [] array){
+//
+//        List <T> transformation = new ArrayList(Arrays.asList(array));
+//        return transformation;
+//    }
 
-        List <T> transformation = new ArrayList(Arrays.asList(array));
-        return transformation;
+    public static <T> ArrayList<T> transformToArrayList (T [] array){
+
+        ArrayList<T> arList = new ArrayList<>();
+        for (T i: array) {
+            arList.add(i);
+        }
+        return arList;
     }
 
 
 
-    public static void shuffle (int firstPosition, int secondPosition, Object []  array) {
+    public static <T> void shuffle (int firstPosition, int secondPosition, T[] array) {
 
-        Object anyObject = array [firstPosition];
-        array[firstPosition] = array [secondPosition];
-        array[secondPosition] = anyObject;
-
+        if (firstPosition == secondPosition || firstPosition > array.length || firstPosition < 0 || secondPosition < 0 || secondPosition > array.length) {
+            System.out.println("Incorrect input array positions");
+        } else {
+            T anyObject = array[firstPosition];
+            array[firstPosition] = array[secondPosition];
+            array[secondPosition] = anyObject;
+            System.out.println("Array after shuffle = " + Arrays.toString(array));
+        }
     }
 
     public static void boxWithFruits () {
