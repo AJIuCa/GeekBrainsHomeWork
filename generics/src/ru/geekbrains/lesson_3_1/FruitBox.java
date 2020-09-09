@@ -33,8 +33,8 @@ public class FruitBox <T extends Fruit> {
                 weight = weight + ourFruits.get(i).getFruitWeight();
             }
             return weight;
-            }
         }
+    }
 
     public boolean compareFruitBox(FruitBox newBox) {
         return this.checkWeight() == newBox.checkWeight();
