@@ -8,8 +8,13 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ClientHandler {
+
+
 
     private Server server;
     private Socket socket;
@@ -28,35 +33,81 @@ public class ClientHandler {
     TextField textField;
     TextField clientWindow;
 
+
+
+//    public ClientHandler(Server server, Socket socket) {
+//
+//        try {
+//            this.server = server;
+//            this.socket = socket;
+//            this.dis = new DataInputStream(socket.getInputStream());
+//            this.dos = new DataOutputStream(socket.getOutputStream());
+//            this.nick = " ";
+//            new Thread(() -> {
+//                try {
+//                    boolean authenticationSuccessful = false;
+//                    int timeout = 120000;
+//                    long connectionTime = System.currentTimeMillis();
+//                    while (System.currentTimeMillis() - connectionTime <= timeout) {
+//                        authenticationSuccessful = authentication();
+//                        if(authenticationSuccessful){break;}
+//                    }
+//                    if(authenticationSuccessful) {
+//                        readMessage();
+//                    }
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                } finally {
+//                    closeConnection();
+//                }
+//            }).start();
+//
+//
+//
+//        } catch (IOException e) {
+//            throw new RuntimeException("Проблемы при создании обработчика клиента");
+//        }
+//    }
+
+
     public ClientHandler(Server server, Socket socket) {
-        try {
-            this.server = server;
-            this.socket = socket;
-            this.dis = new DataInputStream(socket.getInputStream());
-            this.dos = new DataOutputStream(socket.getOutputStream());
-            this.nick = " ";
-            new Thread(() -> {
+
+             ExecutorService execute = Executors.newCachedThreadPool();
+
                 try {
-                    boolean authenticationSuccessful = false;
-                    int timeout = 120000;
-                    long connectionTime = System.currentTimeMillis();
-                    while (System.currentTimeMillis() - connectionTime <= timeout) {
-                        authenticationSuccessful = authentication();
-                        if(authenticationSuccessful){break;}
-                    }
-                    if(authenticationSuccessful) {
-                        readMessage();
-                    }
+                    this.server = server;
+                    this.socket = socket;
+                    this.dis = new DataInputStream(socket.getInputStream());
+                    this.dos = new DataOutputStream(socket.getOutputStream());
+                    this.nick = " ";
+
+
+                    execute.submit(() -> {
+
+                        try {
+                        boolean authenticationSuccessful = false;
+                        int timeout = 120000;
+                        long connectionTime = System.currentTimeMillis();
+                        while (System.currentTimeMillis() - connectionTime <= timeout) {
+                            authenticationSuccessful = authentication();
+
+                            if(authenticationSuccessful){break;}
+                         }
+                            if(authenticationSuccessful) {
+                            readMessage();
+                         }
+                             } catch (IOException e) {
+                                 e.printStackTrace();
+                             } finally {
+                                 closeConnection();
+                                }
+                            });
+
+
                 } catch (IOException e) {
-                    e.printStackTrace();
-                } finally {
-                    closeConnection();
+                    throw new RuntimeException("Проблемы при создании обработчика клиента");
                 }
-            }).start();
-        } catch (IOException e) {
-            throw new RuntimeException("Проблемы при создании обработчика клиента");
         }
-    }
 
     private boolean authentication() throws IOException {
         while (true) {
