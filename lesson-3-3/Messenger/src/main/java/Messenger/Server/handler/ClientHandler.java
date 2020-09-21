@@ -1,7 +1,10 @@
 package Messenger.Server.handler;
 
 import Messenger.Server.inter.Server;
+import Messenger.Server.service.ServerImpl;
 import javafx.fxml.FXML;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.awt.*;
 import java.io.DataInputStream;
@@ -14,7 +17,7 @@ import java.util.concurrent.Executors;
 
 public class ClientHandler {
 
-
+    public static final Logger LOGGER = LogManager.getLogger(ServerImpl.class);
 
     private Server server;
     private Socket socket;
@@ -72,6 +75,8 @@ public class ClientHandler {
 
     public ClientHandler(Server server, Socket socket) {
 
+
+
              ExecutorService execute = Executors.newCachedThreadPool();
 
                 try {
@@ -83,6 +88,8 @@ public class ClientHandler {
 
 
                     execute.submit(() -> {
+
+                        LOGGER.info("New Thread created");
 
                         try {
                         boolean authenticationSuccessful = false;
@@ -118,6 +125,7 @@ public class ClientHandler {
                 if (nick != null) {
                     if (!server.isNickBusy(nick)) {
 //                        sendMsg("/authOk " + nick);
+                        LOGGER.info("Client successful join to channel");
                         sendMsg("Client " + nick + " join to chat");
                         this.nick = nick;
                         server.broadcastMsg(this.nick + " join the chat \n");

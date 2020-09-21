@@ -11,24 +11,34 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class ServerImpl implements Server {
+
+    public static final Logger LOGGER = LogManager.getLogger(ServerImpl.class);
 
     private List<ClientHandler> clients;
     private AuthService authService;
 
     public ServerImpl() {
+
         try {
             ServerSocket serverSocket = new ServerSocket(PORT); // Создаем сокет на сервере
             authService = new AuthServiceImpl(); // Создаем список зарегистрированных учетных записей
             clients = new LinkedList<>(); // Создаем список клиентов
+            LOGGER.info("Server start normal");
             // Цикл подключения клиентов
             while (true) { // Подключение клиентов
                 System.out.println("Ожидаем подключения клиентов");
                 Socket socket = serverSocket.accept(); // Ожидание подключения клиента
+                LOGGER.info("Client successful connect");
                 System.out.println("Клиент подключился");
                 new ClientHandler(this, socket); // Создаем для каждого клиент свой обработчик
             }
         } catch (IOException | SQLException e) {
+            LOGGER.info("Server shutdown");
             System.out.println("Проблема на сервере");
         } finally {
             if (authService != null) {
