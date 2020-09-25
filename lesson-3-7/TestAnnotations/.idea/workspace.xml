@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4db21456-dbd1-4d9f-a679-976ef7e9ec69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/AnnotationTests.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/src/main/java/MethodsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/src/main/java/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/src/main/java/TestClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/target/classes/MethodsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/target/classes/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnnotationTests/target/classes/TestClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pupil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pupil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="AnnotationType" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hjEGKGoxORCq78EumTMg0oalJP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="experimental" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="TestAnnotations" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="TestAnnotations" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4db21456-dbd1-4d9f-a679-976ef7e9ec69" name="Default Changelist" comment="" />
+      <created>1600516005744</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600516005744</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1600519259619">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1600519259619" />
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1600519940448">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1600519940448" />
+    <state width="384" height="466" key="DebuggerActiveHint" timestamp="1601060254332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="384" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1601060254332" />
+    <state width="1860" height="168" key="GridCell.Tab.0.bottom" timestamp="1601060765333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.60.1920.1040@-1920.60.1920.1040" timestamp="1600718157991" />
+    <state width="1860" height="168" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1601060765333" />
+    <state width="1860" height="168" key="GridCell.Tab.0.center" timestamp="1601060765332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.60.1920.1040@-1920.60.1920.1040" timestamp="1600718157991" />
+    <state width="1860" height="168" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1601060765332" />
+    <state width="1860" height="168" key="GridCell.Tab.0.left" timestamp="1601060765332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.60.1920.1040@-1920.60.1920.1040" timestamp="1600718157991" />
+    <state width="1860" height="168" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1601060765332" />
+    <state width="1860" height="168" key="GridCell.Tab.0.right" timestamp="1601060765333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.60.1920.1040@-1920.60.1920.1040" timestamp="1600718157991" />
+    <state width="1860" height="168" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1601060765333" />
+    <state width="1860" height="168" key="GridCell.Tab.1.bottom" timestamp="1601060765333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="168" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1601060765333" />
+    <state width="1860" height="168" key="GridCell.Tab.1.center" timestamp="1601060765333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="168" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1601060765333" />
+    <state width="1860" height="168" key="GridCell.Tab.1.left" timestamp="1601060765333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="168" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1601060765333" />
+    <state width="1860" height="168" key="GridCell.Tab.1.right" timestamp="1601060765333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="168" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1601060765333" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1600519907161">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1600519907161" />
+    <state x="-1578" y="241" key="new project wizard" timestamp="1600804358947">
+      <screen x="-1920" y="60" width="1920" height="1040" />
+    </state>
+    <state x="-1578" y="241" key="new project wizard/0.0.1920.1040/-1920.60.1920.1040@-1920.60.1920.1040" timestamp="1600804358947" />
+    <state x="660" y="277" key="refactoring.ChangeSignatureDialog" timestamp="1600519819947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="660" y="277" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1600519819947" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1600528683152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1600528683152" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600527966903">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.60.1920.1040@0.0.1920.1040" timestamp="1600527966903" />
+  </component>
+</project>
