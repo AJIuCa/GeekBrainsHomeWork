@@ -2,13 +2,8 @@
 public class Pupil {
 
 
-    private  String name;
-    private  int age;
-
-    public Pupil(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+    private final String name = "Ivan";
+    private final int age = 31;
 
     public Pupil() {
     }
