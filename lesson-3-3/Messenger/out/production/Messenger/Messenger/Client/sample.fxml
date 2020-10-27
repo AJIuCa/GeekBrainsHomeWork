@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Messenger.Client.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="690.0" style="-fx-background-color: #99FFCC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea fx:id="mainTextArea" editable="false" layoutX="14.0" layoutY="37.0" prefHeight="502.0" prefWidth="436.0" VBox.vgrow="ALWAYS" />
+      <TextArea fx:id = "clientWindow" editable="false" layoutX="465.0" layoutY="69.0" prefHeight="470.0" prefWidth="218.0" />
+      <Label layoutX="21.0" layoutY="6.0" text="Messenger" />
+      <Label layoutX="549.0" layoutY="52.0" text="Clients" />
+      <TextField fx:id="textField" layoutX="14.0" layoutY="551.0" onAction="#sendMsg" prefHeight="25.0" prefWidth="584.0" promptText="Введите Ваше сообщение..." VBox.vgrow="ALWAYS" />
+      <Button layoutX="616.0" layoutY="551.0" mnemonicParsing="false" onAction="#sendMsg" text="Send" />
+   </children>
+</Pane>
+        </VBox>
