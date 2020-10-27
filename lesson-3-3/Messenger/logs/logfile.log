@@ -1,9 +1,0 @@
-INFO  2020-09-17 22:24:55 [main] Messenger.Server.service.ServerImpl (ServerImpl.java:31) - Server start normal
-INFO  2020-09-17 22:27:07 [main] Messenger.Server.service.ServerImpl (ServerImpl.java:31) - Server start normal
-INFO  2020-09-17 22:33:38 [main] Messenger.Server.service.ServerImpl (ServerImpl.java:31) - Server start normal
-INFO  2020-09-17 22:51:00 [main] Messenger.Server.service.ServerImpl (ServerImpl.java:31) - Server start normal
-INFO  2020-09-17 22:58:02 [main] Messenger.Server.service.ServerImpl (ServerImpl.java:31) - Server start normal
-INFO  2020-09-17 22:58:20 [main] Messenger.Server.service.ServerImpl (ServerImpl.java:36) - Client successful connect
-INFO  2020-09-17 22:58:20 [pool-2-thread-1] Messenger.Server.handler.ClientHandler (ClientHandler.java:92) - New Thread created
-INFO  2020-09-17 22:58:20 [pool-2-thread-1] Messenger.Server.handler.ClientHandler (ClientHandler.java:128) - Client successful join to channel
-INFO  2020-09-17 23:15:53 [main] Messenger.Server.service.ServerImpl (ServerImpl.java:31) - Server start normal
