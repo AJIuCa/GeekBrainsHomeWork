@@ -22,33 +22,38 @@ public class Client {
 
     public static void runClient() throws InterruptedException, IOException {
 
-        String chooseCommand; //выбор команды
-        final String uploadCommand = "upload";    // команда на заливку файлов
-        final String downloadCommand = "download";  // команда на скачивание файлов
-        final String listCommand = "ls";      // список команд
-        final String disconnect1 = "!exit";   // отсоединится
-        final String disconnect2 = "!quit";   // отсоединится
+        String inputCommand; //выбор команды
+        final String uploadCommand = "/upload";    // команда на заливку файлов
+        final String downloadCommand = "/download";  // команда на скачивание файлов
+        final String serverFilesList = "/ls";  // список файлов на сервере
+        final String commandsList = "/help";      // список команд
+        final String disconnect1 = "/exit";   // отсоединится
+        final String disconnect2 = "/quit";   // отсоединится
+
         boolean circle = true;
 
 
         CountDownLatch startConnection = new CountDownLatch(1);
-        new Thread(() -> NettyClientNetwork.getInstance().run(startConnection)).run(); // в параллельном пооке запускаем сеть
+        new Thread(() -> NettyClientNetwork.getInstance().run(startConnection)).start(); // в параллельном потоке запускаем сеть
         startConnection.await(); // добавляем await, чтобы код ниже не мог запустится раньше установившегося соединения с сервером
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // добавляем буфер ридер для считывания с консоли команд
+         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // добавляем буфер ридер для считывания с консоли команд
 
-
+        System.out.println("Input /help for command list\n");
         while (circle) { //запускаем цикл
 
+            inputCommand = reader.readLine(); //присваиваем переменной введёное в консоли значение
 
-            chooseCommand = reader.readLine(); //присваиваем переменной введёное в консоли значение
 
-
-            if (chooseCommand.equals(disconnect1)) {  //если введённое значение совпадает со значением переменной то прерываем цикл
+            if (inputCommand.equals(disconnect1)) {  //если введённое значение совпадает со значением переменной то прерываем цикл
                 break;
-            } else if (chooseCommand.equals(disconnect2)) { //если введённое значение совпадает со значением переменной то прерываем цикл
+
+
+            } else if (inputCommand.equals(disconnect2)) { //если введённое значение совпадает со значением переменной то прерываем цикл
                 break;
-            } else if (chooseCommand.equals(uploadCommand)) { //если введённое значение совпадает со значением переменной то начинаем загрузку файла
+
+
+            } else if (inputCommand.equals(uploadCommand)) { //если введённое значение совпадает со значением переменной то начинаем загрузку файла
 
                 System.out.println("\nPlease write the file name\nFor example 'demo.txt'");
 
@@ -79,15 +84,19 @@ public class Client {
                             continue;
 
 
-                    } else if (chooseCommand.equals(downloadCommand)) {
+                    } else if (inputCommand.equals(downloadCommand)) {
                          System.out.println("Select file name");   // код в разработке
 
 
-                    } else if (chooseCommand.equals(listCommand)) {
+                    } else if (inputCommand.equals(commandsList)) {
                         System.out.println("-----------Commands-------------");
                         System.out.println(uploadCommand + " - upload file\n" + downloadCommand + " - download file\n"
-                            + listCommand + " - files list on server storage");
-                     } else {
+                            + serverFilesList + " - files list on server storage\n" + commandsList + " - help");
+
+                    } else if (inputCommand.equals(serverFilesList)) {
+                        System.out.println("Files on server"); // в разработке
+
+                    } else {
                         System.out.println("###########################");
                         System.out.println("<Error - command unknown>");
                         System.out.println("###########################");

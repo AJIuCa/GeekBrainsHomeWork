@@ -1,7 +1,7 @@
 package Server.Handlers;
 
 
-import Server.Handlers.Processes.WorkWithFiles;
+import Server.Handlers.Processes.WorkWithClientFiles;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -17,7 +17,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     }
 
     private Status currentStatus;
-    private WorkWithFiles workWithFiles; //работа с файлами
+    private WorkWithClientFiles workWithClientFiles; //работа с файлами
 //    private ServerCommands serverCommands; // работа с коммандами (в разработке)
 
 
@@ -25,7 +25,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     public ServerHandler(String path) {  // конструктор нашего хэндлера с указанием рабочей папки
 
         this.currentStatus = Status.AWAIT;  // по умолчанию статус Ожидание
-        this.workWithFiles = new WorkWithFiles(path);
+        this.workWithClientFiles = new WorkWithClientFiles(path);
 //        this.serverCommands = serverCommands;
     }
 
@@ -42,7 +42,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
                 checkingByte = buf.readByte();
                 if (checkingByte == (byte) signalToFiles) { // если контрольный байт равен ! то работаем с файлами и меняем статус
                     currentStatus = Status.Work_With_Files;
-                    workWithFiles.prepare();
+                    workWithClientFiles.prepare();
 
                 } else if (checkingByte == (byte) signalToCommands) { // если контрольный байт равен * то работаем с коммандами и меняем статус
                     currentStatus = Status.Work_With_Commands;
@@ -50,7 +50,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
                 }
             }
             if (currentStatus == Status.Work_With_Files) { // если статус  Work_With_Files начинаем работу с файлами
-                workWithFiles.run(ctx,buf);
+                workWithClientFiles.receivingFileFromClient(ctx,buf);
             }
             if (currentStatus == Status.Work_With_Commands) { // если статус  Work_With_Commands начинаем работу с коммандами
 //                    serverCommands.run(); // в разработке
